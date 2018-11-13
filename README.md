@@ -23,5 +23,5 @@ iconfont的使用
 swiperOption: {
                 pagination: '.swiper-pagination',
                 loop:true //循环播放
-              }
+               }
 
