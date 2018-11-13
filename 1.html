@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <counter :count="1"></counter>
+        <counter :count="2"></counter>
+    </div>
+</body>
+<script>
+    var counter = {
+        props:["count"],
+        template: "<div>{{count}}</div>"
+    }
+
+    var vm = new Vue({
+        el:'#app',
+        components: {
+            counter:counter
+        }
+
+    })
+
+</script>
+</html>
