@@ -5,25 +5,24 @@
     <title>Title</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
+<style>
+
+
+
+</style>
 <body>
-    <div id="app">
-        <counter :count="1"></counter>
-        <counter :count="2"></counter>
-    </div>
+
 </body>
 <script>
-    var counter = {
-        props:["count"],
-        template: "<div>{{count}}</div>"
+
+  var arr = ['abc','abcd','sss','2','2','t','2','ss','f','22','d'];
+  var tmp = [];
+  for(var i=0;i<arr.length;i++){
+    if(tmp.indexOf(arr[i]) == -1){
+      tmp.push(arr[i])
     }
+   }
 
-    var vm = new Vue({
-        el:'#app',
-        components: {
-            counter:counter
-        }
-
-    })
-
+  console.log(tmp);
 </script>
 </html>
