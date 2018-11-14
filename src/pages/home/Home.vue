@@ -14,6 +14,7 @@
   import HomeIcons from './components/Icons'
   import HomeRecommend from './components/Recommend'
   import HomeWeekend from './components/Weekend'
+  import axios from 'axios'
 
   export default {
     name: "Home",
@@ -23,6 +24,18 @@
       HomeIcons,
       HomeRecommend,
       HomeWeekend
+    },
+    methods: {
+      getHomeInfo () {
+        axios.get('/static/mock/index.json').then(this.getHomeInfoSucc)
+      },
+      getHomeInfoSucc (res) {
+        console.log(res);
+      }
+    },
+    mounted: function () {
+      this.getHomeInfo()
+
     }
   }
 </script>

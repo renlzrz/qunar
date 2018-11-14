@@ -7,11 +7,8 @@
         <img :src="item.imgUrl" class="swiper-img">
       </swiper-slide>
 
-
       <!-- Optional controls -->
       <div class="swiper-pagination"  slot="pagination" style=""></div>
-
-
     </swiper>
 
   </div>
