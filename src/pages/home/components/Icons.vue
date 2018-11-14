@@ -6,7 +6,6 @@
             <div class="icon" v-for="item of page" :key="item.id">
               <div class="icon-img">
                 <img class="icon-img-content" :src='item.imgUrl' alt="">
-
               </div>
               <p class="icon-desc">{{item.desc}}</p>
             </div>
@@ -26,58 +25,58 @@
           return {
             iconList:[{
               id: '0001',
-              imgUrl:'../../../../static/QQ截图20181114153610.jpg',
+              imgUrl:'../../../../static/20181114153610.jpg',
               desc:'景点门票'
               },{
               id: '0002',
-              imgUrl:'../../../../static/QQ截图20181114153648.jpg',
+              imgUrl:'../../../../static/20181114153648.jpg',
               desc:'滑雪季'
               },{
               id: '0003',
-              imgUrl: '../../../../static/QQ截图20181114153729.jpg',
+              imgUrl: '../../../../static/20181114153729.jpg',
               desc: '泡温泉'
               },{
               id: '0004',
-              imgUrl: '../../../../static/QQ截图20181114153729.jpg',
+              imgUrl: '../../../../static/20181114153729.jpg',
               desc: '动物园'
             },{
               id: '0005',
-              imgUrl: '../../../../static/QQ截图20181114153746.jpg',
+              imgUrl: '../../../../static/20181114153746.jpg',
               desc: '一日游'
             },{
               id: '0006',
-              imgUrl: '../../../../static/QQ截图20181114153746.jpg',
+              imgUrl: '../../../../static/20181114153746.jpg',
               desc: '必有绑定'
             },{
               id: '0007',
-              imgUrl: '../../../../static/QQ截图20181114153648.jpg',
+              imgUrl: '../../../../static/20181114153648.jpg',
               desc: '自然风光'
             },{
               id: '0008',
-              imgUrl: '../../../../static/QQ截图20181114153610.jpg',
+              imgUrl: '../../../../static/20181114153610.jpg',
               desc: '全部'
             },{
               id: '0009',
-              imgUrl: '../../../../static/QQ截图20181114153746.jpg',
+              imgUrl: '../../../../static/20181114153746.jpg',
               desc: '一日游'
             }
             ]
           }
       },
-      computed: {
+        computed: {
           pages () {
-            const pages = []
-            this.iconList.forEach((item,index) => {
-              const page = Math.floor(index/8)
-              if(!pages[page]) {
-                pages[page] = []
-              }
-              pages[page].push(item)
-            })
-            return pages;
+              const pages = []
+              this.iconList.forEach((item,index) => {
+                  const page = Math.floor(index/8)
+                  if(!pages[page]) {
+                    pages[page] = []
+                  }
+                  pages[page].push(item)
+                })
+              return pages;
           }
+        }
       }
-    }
 </script>
 
 <style lang="less" scoped>
@@ -94,7 +93,7 @@
       padding-bottom: 25%;
       .icon-desc{
         position: absolute;
-        top: 63px;
+        top: 72%;
         left: 0;
         right: 0;
         height:.44rem;

@@ -24,6 +24,9 @@
     .header-left {
       width: 0.64rem;
       float: left;
+      .iconfont {
+        margin-left: 0.13rem;
+      }
     }
     .header-right {
       width: 1.1rem;
