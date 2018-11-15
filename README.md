@@ -43,3 +43,7 @@ swiperOption: {
 >城市选择路由配置
 
 <router-link to="/city"></router-link>
+
+>better-scroll的使用
+
+>页面动态数据渲染
