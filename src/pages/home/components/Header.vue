@@ -2,7 +2,12 @@
   <div class="header">
     <div class="header-left"><span class="iconfont">&#xe624;</span></div>
     <div class="header-input"><span class="iconfont">&#xe632;</span>输入城市景点</div>
-    <div class="header-right">{{this.city}}<span class="arrow-icon iconfont ">&#xe64a;</span></div>
+    <router-link to="/city">
+      <div class="header-right">
+        {{this.city}}<span class="arrow-icon iconfont ">&#xe64a;</span>
+      </div>
+    </router-link>
+
   </div>
 </template>
 
@@ -15,12 +20,11 @@
     }
 </script>
 
-<style lang="less" scoped>
-
-
+<style lang="stylus" scoped>
+  @import "../../../assets/styles/varibles.styl"
   .header {
-    height: 0.86rem;
-    line-height: 0.86rem;
+    height: $headerHeight
+    line-height: $headerHeight
     display: flex;
     background: #00bcd4;
     color: #fff;
@@ -29,11 +33,13 @@
       float: left;
       .iconfont {
         margin-left: 0.13rem;
+        font-size:0.39rem;
       }
     }
     .header-right {
       width: 1.1rem;
       float: right;
+      color: #fff;
       .arrow-icon {
         font-size: 0.3rem;
         margin-left: 0.1rem;

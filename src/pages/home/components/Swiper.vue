@@ -3,7 +3,7 @@
   <div class="wrapper">
     <swiper :options="swiperOption">
       <!-- slides -->
-      <swiper-slide v-for="item in swiperList" :key="item.id">
+      <swiper-slide v-for="item in list" :key="item.id">
         <img :src="item.imgUrl" class="swiper-img">
       </swiper-slide>
 
@@ -17,24 +17,17 @@
 
 <script>
     export default {
-        name: "HomeSwiper",
-        data: function () {
-          return {
-            swiperOption: {
-              pagination: '.swiper-pagination',
-              loop:true
-            },
-            swiperList: [{
-              id:'0001',
-              imgUrl:'//img1.qunarzz.com/vc/a5/e0/64/c6bd8680fb67247db15df6057b.jpg'
-            },{
-              id:'0002',
-              imgUrl:'//img1.qunarzz.com/vc/2f/8e/51/cb4d31b360c836f7d1bbe83c13.jpg'
-            },{
-              id:'0003',
-              imgUrl:'//img1.qunarzz.com/vc/a4/29/dd/4a0734b77f675da2a8ca4a9879.jpg'
-            }]
+      name: "HomeSwiper",
+      props: {
+        list:Array
+      },
+      data: function () {
+        return {
+          swiperOption: {
+            pagination: '.swiper-pagination',
+            loop:true
           }
+        }
 
       }
     }
@@ -48,8 +41,8 @@
   <!--}-->
 <!--</style>-->
 
-<style lang="less" scoped>
-  .wrapper /deep/ .swiper-pagination-bullet-active {
+<style lang="stylus" scoped>
+  .wrapper >>> .swiper-pagination-bullet-active {
     background-color: #fff !important;
   }
   .wrapper {

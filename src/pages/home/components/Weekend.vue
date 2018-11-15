@@ -2,7 +2,7 @@
   <div>
     <div class="title">周末去哪</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList">
+      <li class="item border-bottom" v-for="item of list">
         <div class="item-img-wrapper">
           <img class="item-img" :src="item.imgUrl">
         </div>
@@ -21,32 +21,15 @@
 <script>
   export default {
     name: "HomeWeekend",
-    data: function() {
-      return {
-        recommendList: [{
-          id:'0001',
-          imgUrl: '../../../../static/20181114183856.jpg',
-          title:'大连圣亚海洋世界',
-          desc:'浪漫大连首站，浪漫的海洋世界'
-        },{
-          id:'0002',
-          imgUrl: '../../../../static/20181114183936.jpg',
-          title:'大连圣亚海洋世界',
-          desc:'浪漫大连首站，浪漫的海洋世界'
-        },{
-          id:'0003',
-          imgUrl: '../../../../static/20181114183856.jpg',
-          title:'大连圣亚海洋世界',
-          desc:'浪漫大连首站，浪漫的海洋世界'
-        }]
-      }
-
+    props: {
+      list:Array
     }
+
 
   }
 </script>
 
-<style lang="less" scoped>
+<style lang="stylus" scoped>
   .title {
     margin-top: 0rem;
     line-height: 0.8rem;
@@ -56,7 +39,7 @@
   .item-img-wrapper {
     height: 0;
     overflow: hidden;
-    padding-bottom: 33.9%;
+    padding-bottom: 37.1%;
       .item-img {
         width: 100%;
       }

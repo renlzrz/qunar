@@ -36,3 +36,10 @@ swiperOption: {
 >ajax获取首页数据
 
 >父子组件数据传递
+
+
+## 城市列表页面开发
+
+>城市选择路由配置
+
+<router-link to="/city"></router-link>
