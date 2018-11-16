@@ -4,7 +4,7 @@
     <div class="header-input"><span class="iconfont">&#xe632;</span>输入城市景点</div>
     <router-link to="/city">
       <div class="header-right">
-        {{this.city}}<span class="arrow-icon iconfont ">&#xe64a;</span>
+        {{this.$store.state.city}}<span class="arrow-icon iconfont ">&#xe64a;</span>
       </div>
     </router-link>
 
@@ -14,9 +14,6 @@
 <script>
     export default {
       name: "HomeHeader",
-      props: {
-        city:String
-      }
     }
 </script>
 
