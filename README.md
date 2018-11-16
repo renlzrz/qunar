@@ -11,21 +11,21 @@
 
 >样式穿透
 
-.swiper-pagination-bullet-active {
+`.swiper-pagination-bullet-active {
     background-color: #fff !important;
-  }
+  }`
 
 
 或者
 
-.wrapper /deep/ .swiper-pagination-bullet-active {
+`.wrapper /deep/ .swiper-pagination-bullet-active {
     background-color: #fff !important;
-  }
+  }`
   
-swiperOption: {
+`swiperOption: {
                 pagination: '.swiper-pagination',
                 loop:true //循环播放
-               }
+               }`
 
 >首页图标区域
 
@@ -47,3 +47,16 @@ swiperOption: {
 >better-scroll的使用
 
 >页面动态数据渲染
+
+>父子组件传值
+
+点击字母滚动到相应位置
+
+`watch: {
+      letter () {
+        if(this.letter) {
+          const element = this.$refs[this.letter][0]
+          this.scroll.scrollToElement(element)
+        }
+      }
+    }`
