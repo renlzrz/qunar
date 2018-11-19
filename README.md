@@ -75,3 +75,12 @@
           state.city = city
         }
       }`
+      
+ 路由方法     
+      `methods: {
+        handleCityClick (city) {
+          this.changeCity(city)
+          this.$router.push('/')
+       }}`
+       
+>公用图片画廊组件

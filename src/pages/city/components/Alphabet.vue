@@ -15,6 +15,7 @@
     props: {
       cities:Object
     },
+    // 显示右侧字幕列表
     computed: {
       letters () {
         const letters = []
@@ -33,6 +34,7 @@
     updated: function () {
       this.startY = this.$refs['A'][0].offsetTop
     },
+    // 滑动右侧字母匹配城市列表
     methods: {
       handleLetterClick (e) {
         this.$emit('change', e.target.innerText)

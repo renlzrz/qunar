@@ -33,15 +33,18 @@
           timer: null
         }
       },
+      // 输入城市名找到符合城市
       watch: {
         keyword () {
           if(this.timer) {
             clearTimeout(this.timer)
           }
+          // 没有输入则为空
           if (!this.keyword) {
             this.list = []
             return
           }
+          // 设置间隔减少性能消耗
           this.timer = setTimeout(() => {
             const result = []
             for (let i in this.cities) {
@@ -62,6 +65,7 @@
         }
       },
       mounted: function () {
+        // 滑动组件
         this.scroll = new Bscroll(this.$refs.search)
       }
     }

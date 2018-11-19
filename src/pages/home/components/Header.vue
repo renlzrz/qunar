@@ -22,35 +22,35 @@
   .header {
     height: $headerHeight
     line-height: $headerHeight
-    display: flex;
-    background: #00bcd4;
-    color: #fff;
+    display: flex
+    background: #00bcd4
+    color: #fff
     .header-left {
-      width: 0.64rem;
-      float: left;
+      width: 0.64rem
+      float: left
       .iconfont {
-        margin-left: 0.13rem;
-        font-size:0.39rem;
+        margin-left: 0.13rem
+        font-size:0.39rem
       }
     }
     .header-right {
-      width: 1.1rem;
-      float: right;
-      color: #fff;
+      min-width: 1.1rem
+      float: right
+      color: #fff
       .arrow-icon {
-        font-size: 0.3rem;
-        margin-left: 0.1rem;
+        font-size: 0.3rem
+        margin-left: 0.1rem
       }
     }
     .header-input {
-      flex: 1;
-      line-height: 0.64rem;
-      height: 0.64rem;
-      margin-top: 0.12rem;
-      margin-right: 0.2rem;
-      background: #fff;
-      border-radius: 0.1rem ;
-      color: #ccc;
+      flex: 1
+      line-height: 0.64rem
+      height: 0.64rem
+      margin-top: 0.12rem
+      margin-right: 0.2rem
+      background: #fff
+      border-radius: 0.1rem
+      color: #ccc
     }
 
   }

@@ -31,6 +31,7 @@
         }
       },
       computed: {
+        // 每页图标个数设置
         pages () {
             const pages = []
             this.list.forEach((item,index) => {

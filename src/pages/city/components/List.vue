@@ -43,6 +43,7 @@
       letter:''
     },
     methods: {
+      // vuex
       handleCityClick(city) {
         this.$store.commit('changeCity',city)
         this.$router.push('/')
@@ -58,6 +59,7 @@
       }
     },
     mounted: function () {
+      // 滑动组件
       this.scroll = new Bscroll(this.$refs.wrapper)
     }
   }
