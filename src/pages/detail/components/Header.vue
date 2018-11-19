@@ -39,6 +39,9 @@
     },
     activated: function () {
       window.addEventListener('scroll', this.handleScroll)
+    },
+    deactivated: function () {
+      window.removeEventListener('scroll', this.handleScroll)
     }
   }
 </script>
@@ -61,11 +64,11 @@
     }
   }
   .header-fixed {
+    z-index 2
     position: fixed
     top: 0
     left: 0
     right: 0
-
     height: $headerHeight
     line-height: $headerHeight
     text-align: center

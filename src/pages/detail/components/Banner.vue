@@ -1,13 +1,15 @@
 <template>
   <div>
     <div class="banner" @click="handleBannerClick">
-      <img class="banner-img" src="../../../../static/20181118111523.jpg" alt="">
+      <img class="banner-img" :src="bannerImg" alt="">
       <div class="banner-info">
-        <div class="banner-tittle">大连圣亚海洋世界</div>
-        <div class="banner-number"><span class="iconfont banner-fcon">&#xe692;</span>39</div>
+        <div class="banner-tittle">{{this.sightName}}</div>
+        <div class="banner-number"><span class="iconfont banner-fcon">&#xe692;</span>
+        {{this.gallaryImgs.length}}
+        </div>
       </div>
     </div>
-    <common-gallary :imgs="imgs" v-show="showGallary"
+    <common-gallary :imgs="gallaryImgs" v-show="showGallary"
     @close="handleGallaryClose">
 
     </common-gallary>
@@ -19,10 +21,15 @@
   import CommonGallary from 'common/gallary/Gallary'
   export default {
     name: "DetailBanner",
+    props: {
+      sightName:'',
+      bannerImg:'',
+      gallaryImgs:''
+
+    },
     data: function () {
       return {
         showGallary:false,
-        imgs:['../../../static/20181118111523.jpg']
       }
 
     },
@@ -54,14 +61,14 @@
       position: absolute
       left:0
       right:0
-      bottom:0.44rem
+      bottom:0rem
       line-height:0.6rem
       color: #fff
       background-image:linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,0.8))
       .banner-tittle {
         flex:1
         font-style: 0.32rem
-        padding:0.2rem
+        padding:0.1rem
       }
       .banner-number {
         margin-top: 0.22rem
