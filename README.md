@@ -86,3 +86,13 @@
 >公用图片画廊组件
 
 >header渐隐渐显
+
+路由返回到顶部
+
+`scrollBehavior (to, from, savedPosition) {
+     return { x: 0, y: 0 } // return 期望滚动到哪个的位置
+   }`
+
+>项目中加入动画
+
+>项目接口联调
