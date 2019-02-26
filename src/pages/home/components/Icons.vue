@@ -41,7 +41,7 @@
                 }
                 pages[page].push(item)
               })
-            return pages;
+            return pages
         }
       }
     }

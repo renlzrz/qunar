@@ -25,7 +25,8 @@
         return {
           swiperOption: {
             pagination: '.swiper-pagination',
-            loop:true
+            loop: true,
+            autoplay: 3000
           }
         }
 
@@ -43,7 +44,7 @@
 
 <style lang="stylus" scoped>
   .wrapper >>> .swiper-pagination-bullet-active {
-    background-color: #fff !important;
+    background-color: #fff;
   }
   .wrapper {
     overflow: hidden;
