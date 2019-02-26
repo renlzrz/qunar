@@ -26,7 +26,7 @@
       HomeRecommend,
       HomeWeekend
     },
-    data () {
+    data:function () {
       return {
         swiperList: [],
         iconList: [],
@@ -39,7 +39,7 @@
     },
     methods: {
       getHomeInfo () {
-        axios.get('/static/mock/index.json?city=' + this.city).then(this.getHomeInfoSucc)
+        axios.get('./static/mock/index.json?city=' + this.city).then(this.getHomeInfoSucc)
       },
       getHomeInfoSucc (res) {
         res = res.data

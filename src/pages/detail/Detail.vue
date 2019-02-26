@@ -33,7 +33,7 @@
     },
     methods :{
       getDetailInfo () {
-        axios.get('../../static/mock/detail.json?id=' + this.$route.params.id)
+        axios.get('./static/mock/detail.json?id=' + this.$route.params.id)
           .then(this.handleGetDataSucc)
       },
       handleGetDataSucc (res) {

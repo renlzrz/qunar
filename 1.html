@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
 </head>
 <style>
 
@@ -11,17 +11,14 @@
 
 </style>
 <body>
+  <div id="show"></div>
+  <input type="text" id="uname">
+  <button onclick="showUname()">显示</button>
 
 </body>
 <script>
-
-  var arr = ['abc','abcd','sss','2','2','t','2','ss','f','22','d'];
-  var tmp = [];
-  for(var i=0;i<arr.length;i++){
-    if(tmp.indexOf(arr[i]) == -1) {
-      tmp.push(arr[i])
-    }
-   }
-  console.log(tmp);
+for(i=0;i<3;i++) {
+  console.log(i);
+}
 </script>
 </html>
