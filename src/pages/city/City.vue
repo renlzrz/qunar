@@ -38,9 +38,7 @@
         },
         handleGetCityInfoSucc (res) {
           res = res.data
-          // console.log(res);
           const data = res.data
-          // console.log(data);
           this.cities = data.cities
           this.hotCities = data.hotCities
         },
